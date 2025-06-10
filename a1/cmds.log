@@ -1,15 +1,18 @@
 File contains the commands used to answer the questions in a1-25su.
 
-1.
-	echo $HOME >> a1.txt
+#1.
+echo $HOME >> a1.txt
 
-2.
-	ls /proc/ | grep "mem" >> a1.txt
-	ls /proc/ | grep "cpu" >> a1.txt
+#2.
+ls /proc/ | grep "mem" >> a1.txt
+ls /proc/ | grep "cpu" >> a1.txt
 
-3.
-	ls /etc/ | grep "os" >> a1.txt
-	cat /etc/os-release >> a1.txt
-	cat /etc/os-release | grep "VERSION=" | cut -d '=' -f 2 | tr -d '"' >> a1.txt
+#3.
+ls /etc/ | grep "os" >> a1.txt
+cat /etc/os-release >> a1.txt
+cat /etc/os-release | grep "VERSION=" | cut -d '=' -f 2 | tr -d '"' >> a1.txt
 
-4.
+#4a.
+tail -n +2 2019-04.csv | cut -d ',' -f 2,8 | grep '^"2019-04-02' | cut -d ',' -f 2 | sort | uniq -c | sort -r | head -n 3 >> a1.txt
+
+4b.

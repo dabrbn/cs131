@@ -1,40 +1,49 @@
 File contains the terminal outputs related to the questions in a1-25su.
 
 #1.
-	/home/aekn_admal
+/home/aekn_admal
+
+> Found it via the HOME environment variable.
 
 #2.
-	iomem
-	meminfo
+iomem
+meminfo
 
-	cpuinfo
+cpuinfo
 
-The file 'meminfo' contains this VM's memory information. The file 'cpuinfo' contains this VM's CPU information.
+> The file 'meminfo' contains this VM's memory information. The file 'cpuinfo' contains this VM's CPU information.
 
 #3.
-	host.conf
-	hostname
-	hosts
-	hosts.allow
-	hosts.deny
-	os-release
-	sos
+host.conf
+hostname
+hosts
+hosts.allow
+hosts.deny
+os-release
+sos
 
-	NAME="Ubuntu"
-	VERSION="20.04.6 LTS (Focal Fossa)"
-	ID=ubuntu
-	ID_LIKE=debian
-	PRETTY_NAME="Ubuntu 20.04.6 LTS"
-	VERSION_ID="20.04"
-	HOME_URL="https://www.ubuntu.com/"
-	SUPPORT_URL="https://help.ubuntu.com/"
-	BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
-	PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-	VERSION_CODENAME=focal
-	UBUNTU_CODENAME=focal
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
 
-	20.04.6 LTS (Focal Fossa)
+20.04.6 LTS (Focal Fossa)
 
-The operating system version is 20.04.6 LTS (Focal Fossa) and is found in the file 'os-release' under the '/etc/' directory.
+> The operating system version is 20.04.6 LTS (Focal Fossa) and is found in the 'os-release' file under the '/etc/' directory.
 
-4.
+#4a.
+  13279 161.0
+  12380 237.0
+  11102 236.0
+
+> The three most popular pick up locations on April 2nd, 2019 were 161.0, 237.0, and 236.0.
+
+#4b.
