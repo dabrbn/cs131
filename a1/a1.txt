@@ -40,9 +40,9 @@ UBUNTU_CODENAME=focal
 > The operating system version is 20.04.6 LTS (Focal Fossa) and is found in the 'os-release' file under the '/etc/' directory.
 
 #4a.
-  13279 161.0
-  12380 237.0
-  11102 236.0
+13279 161.0
+12380 237.0
+11102 236.0
 
 > The three most popular pick up locations on April 2nd, 2019 were 161.0, 237.0, and 236.0.
 
