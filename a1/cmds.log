@@ -13,6 +13,7 @@ cat /etc/os-release >> a1.txt
 cat /etc/os-release | grep "VERSION=" | cut -d '=' -f 2 | tr -d '"' >> a1.txt
 
 #4a.
-tail -n +2 2019-04.csv | cut -d ',' -f 2,8 | grep '^"2019-04-02' | cut -d ',' -f 2 | sort | uniq -c | sort -r | head -n 3 >> a1.txt
+tail -n +2 2019-04.csv | cut -d , -f 2,8 | grep '^"2019-04-02' | cut -d , -f 2 | sort | uniq -c | sort -r | head -n 3 >> a1.txt
 
-4b.
+#4b.
+tail -n +2 2019-04.csv | cut -d , -f 2,8 | grep '^"2019-04-10' | cut -d , -f 2 | sort | uniq -c | sort -r | head -n 3 >> a1.txt

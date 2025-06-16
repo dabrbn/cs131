@@ -1,4 +1,4 @@
-File contains the terminal outputs related to the questions in a1-25su.
+File contains the outputs related to the questions in a1-25su.
 
 #1.
 /home/aekn_admal
@@ -47,3 +47,8 @@ UBUNTU_CODENAME=focal
 > The three most popular pick up locations on April 2nd, 2019 were 161.0, 237.0, and 236.0.
 
 #4b.
+13200 161.0
+12905 237.0
+11242 236.0
+
+> The three most popular pick up locations on April 10th, 2019 were 161.0, 237.0, and 236.0.
