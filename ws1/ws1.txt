@@ -1,0 +1,28 @@
+File contains the outputs & answers to ws1.
+
+Task 1:
+1a)
+total 919244
+-rw-rw-r-- 1 aekn_admal aekn_admal 941296938 Jun 16 17:01 2019-04.csv
+-rw-rw-r-- 1 aekn_admal aekn_admal         0 Jun 16 17:03 cmds.log
+-rw-rw-r-- 1 aekn_admal aekn_admal        57 Jun 16 17:04 ws1.txt
+
+> Output of `myls`.
+
+1b)
+      4      29     216
+
+> Output of `mywc`.
+
+Task 2:
+2a)
+276.86
+8
+34
+
+> Average fare from 69.0 to 196.0 was 34.
+
+2b)
+474.92
+
+> Largest total amount paid by customers on April 10th, 2019 was 474.92.
