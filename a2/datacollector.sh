@@ -9,6 +9,8 @@ tmp_dir=$(mktemp -d ./tmp.XXXXXX) || exit 1
 read -rp "Enter URL to a CSV dataset: " url 
 curled=$(basename "$url")
 
+cd "$tmp_dir" || exit 1
+
 curl -s -L -o "$curled" "$url"
 
 # unzip if .zip
@@ -27,7 +29,7 @@ process_csv() {
   local summary_file="${csv_file%.*}_summary.md"
 
   cat >> "$summary_file" <<EOF
-## Feature summary for $csv_file
+# Feature Summary for $csv_file
 
 EOF
   
@@ -52,6 +54,7 @@ EOF
   done
 
   cat >> "$summary_file" <<EOF
+
 ## Statistics (Numerical Features)
 | Index | Feature | Min | Max | Mean | StdDev |
 |-------|---------|-----|-----|------|--------|
