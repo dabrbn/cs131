@@ -17,7 +17,7 @@ There are two ways to use the script.
 (bash) → ./datacollector.sh
 Enter URL to a CSV dataset: # provide URL
 
-$ Provide URL when running the script
+# Provide URL when running the script
 (bash) → ./datacollector.sh <url>
 ```
 
@@ -44,6 +44,7 @@ winequality-white_summary.md
 
 - The script will append a suffix to the markdown summary if a file of that name already exists.
 - The script works in a temporary directory that is deleted on exit.
+- Exits with status code 1 if anything funny happens.
 
 ## Resources
 
