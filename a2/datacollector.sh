@@ -24,15 +24,17 @@ if ! curl -s -L -o "$curled" "$url"; then
   exit 1
 fi
 
-# unzip if .zip
+# unzip all .zip files
+# remove .zip file after unzipped
 # if unzip fails, exit
-if [[ "$curled" =~ \.zip$ ]]; then
-  echo "Unzipping $curled..."
-  if ! unzip -q "$curled"; then
-    echo "Failed to unzip. Aborting."
+find . -type f -iname '*.zip' | while IFS= read -r zipfile; do
+  echo "Unzipping $zipfile..."
+  if ! unzip -q "$zipfile"; then
+    echo "Failed to unzip $zipfile. Aborting."
     exit 1
   fi
-fi
+  rm -f "$zipfile"
+done
 
 # gather all csv files into an array
 # checking subdirectories just in case cause of zip
