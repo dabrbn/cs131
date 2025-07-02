@@ -96,8 +96,13 @@ process_csv() {
     echo "|-------|---------|-----|-----|------|--------|"
   } >> "$summary_file"
 
+  local feature_string; feature_string=$(IFS="|"; echo "${features[*]}")
+
   # calculate stats for each column, ignoring header line
-  tail -n +2 "$csv_file" | awk -F"$delimiter" -v num_cols="${#features[@]}" '
+  tail -n +2 "$csv_file" | awk -F"$delimiter" -v num_cols="${#features[@]}" -v feature_string="$feature_string" '
+    BEGIN {
+      split(feature_string, feature, "|")
+    }
     # function to check if is number
     function is_num(value) {
       return value ~ /^-?[0-9]+(\.[0-9]+)?$/
@@ -126,7 +131,7 @@ process_csv() {
         if (!ignore_col[i] && count[i] > 0) {
           mean = sum[i] / count[i]
           stddev = sqrt((squared_sum[i] / count[i]) - (mean)^2)
-          printf "| %d | %s | %.2f | %.2f | %.3f | %.3f |\n", i, "'"${features[i-1]}"'", min[i], max[i], mean, stddev
+          printf "| %d | %s | %.2f | %.2f | %.3f | %.3f |\n", i, feature[i], min[i], max[i], mean, stddev
         }
       }
     }
