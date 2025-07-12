@@ -1,0 +1,53 @@
+File contains the contents of my grades.csv and the output generated from using
+my grader.awk program.
+
+My grades.csv file contains:
+
+StudentID,Name,CS146,CS131,CS100W
+101,Alice,85,90,78
+102,Bob,76,82,88
+103,Charlie,90,85,95
+104,David,65,70,60
+105,Eve,88,92,85
+
+
+This is the output generated from running 'awk -f grader.awk grades.csv':
+
+=======================================
+          Student Grade Records
+=======================================
+Student Name: Alice
+Total Score: 253
+Average Score: 84.33
+Status: Pass
+---------------------------------------
+Student Name: Bob
+Total Score: 246
+Average Score: 82.00
+Status: Pass
+---------------------------------------
+Student Name: Charlie
+Total Score: 270
+Average Score: 90.00
+Status: Pass
+---------------------------------------
+Student Name: David
+Total Score: 195
+Average Score: 65.00
+Status: Fail
+---------------------------------------
+Student Name: Eve
+Total Score: 265
+Average Score: 88.33
+Status: Pass
+---------------------------------------
+
+=======================================
+    Top and Bottom Scoring Students
+=======================================
+Top Student: Charlie
+Score: 270
+---------------------------------------
+Bottom Student: David
+Score: 195
+=======================================

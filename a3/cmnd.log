@@ -1,0 +1,14 @@
+File contains the relevant commands used
+
+Setup:
+mkdir a3
+cd a3
+touch cmnd.log
+touch a3.txt
+touch grader.awk
+touch grades.csv
+vim grades.csv
+vim grader.awk
+
+#1, 2, 3, 4, 5
+See grader.awk script
