@@ -1,3 +1,5 @@
 *.csv
 */wine+quality.zip
 lrn/
+*/.DS_Store
+docker-intro/
