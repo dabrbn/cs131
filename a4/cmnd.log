@@ -1,0 +1,27 @@
+# Setup:
+touch a4.txt
+touch cmnd.log
+touch sparkapp.py
+
+# NOTE:
+# The pyspark.ml module depends on numpy which is apparently not included in the apache/spark-py image
+# so I'll build an image using a Dockerfile with numpy installed.
+#
+# The error:
+# Non-spark-on-k8s command provided, proceeding in pass-through mode...
+# Traceback (most recent call last):
+#   File "/app/sparkapp.py", line 2, in <module>
+#     from pyspark.ml import Pipeline
+#   File "/opt/spark/python/lib/pyspark.zip/pyspark/ml/__init__.py", line 22, in <module>
+#   File "/opt/spark/python/lib/pyspark.zip/pyspark/ml/base.py", line 40, in <module>
+#   File "/opt/spark/python/lib/pyspark.zip/pyspark/ml/param/__init__.py", line 32, in <module>
+# ModuleNotFoundError: No module named 'numpy'
+
+# Create Dockerfile:
+touch Dockerfile
+
+# Build Docker image
+docker build -t my-spark-ml .
+
+# Run sparkapp.py inside the new container and append output to a4.txt
+docker run --rm -v $(pwd):/app -w /app my-spark-ml /opt/spark/bin/spark-submit /app/sparkapp.py >> a4.txt
